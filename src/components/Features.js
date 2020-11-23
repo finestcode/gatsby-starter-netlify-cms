@@ -4,10 +4,12 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 const FeatureGrid = ({ gridItems }) => (
   <div className="columns is-multiline">
-    {gridItems.map((item) => (
+    {gridItems.map((item, index) => (
       <div key={item.text} className="column is-6">
         <section className="section">
-          <div className="has-text-centered">
+          <div className="has-text-centered" style={{
+                width: index ? 'auto' : '1020px',
+              }}>
             <div
               style={{
                 width: '240px',

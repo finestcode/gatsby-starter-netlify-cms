@@ -11,7 +11,7 @@ class BlogRoll extends React.Component {
     return (
       <div className="columns is-multiline">
         {posts &&
-          posts.map(({ node: post }) => (
+          posts.map(({ node: post }, index) => (
             <div className="is-parent column is-6" key={post.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
@@ -32,7 +32,7 @@ class BlogRoll extends React.Component {
                   <p className="post-meta">
                     <Link
                       className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
+                      to={index ? post.fields.slug : ''}
                     >
                       {post.frontmatter.title}
                     </Link>

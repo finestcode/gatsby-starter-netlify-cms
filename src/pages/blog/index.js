@@ -20,9 +20,10 @@ export default class BlogIndexPage extends React.Component {
               backgroundColor: '#f40',
               color: 'white',
               padding: '1rem',
+              width:"100px"
             }}
           >
-            Latest Stories
+            LatestStories
           </h1>
         </div>
         <section className="section">
